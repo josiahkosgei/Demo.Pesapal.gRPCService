@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:ssr": "ng run Demo.PesalPal.gRPC.Client:server:dev",
-    "compile": "./node_modules/protoc/protoc/bin/protoc --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --js_out=import_style=commonjs,binary:src/app/proto --ts_out=service=true:src/app/proto -I ../backend/src/ ../backend/src/**/*.proto",
+    "compile": "./node_modules/protoc/protoc/bin/protoc --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --ts_out=service=true:src/app/Protos -I ../../Demo.Pesapal.gRPCService/ ../../Demo.Pesapal.gRPCService/**/*.proto",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -44,6 +44,7 @@
     "@angular/cli": "^10.1.0",
     "@angular/compiler-cli": "^10.1.1",
     "@angular/language-service": "^10.1.1",
+    "@types/google-protobuf": "^3.7.3",
     "@types/jasmine": "~3.4.4",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^12.12.56",

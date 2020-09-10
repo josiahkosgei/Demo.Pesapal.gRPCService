@@ -31,7 +31,7 @@ namespace Demo.Pesapal.gRPCService
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<PaymentgRPCService>();
 
                 endpoints.MapGet("/", async context =>
                 {
